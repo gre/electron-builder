@@ -1,5 +1,5 @@
 import { configureRequestOptionsFromUrl, GithubOptions } from "builder-util-runtime"
-import { MacUpdater } from "electron-updater/out/MacUpdater"
+import { MacUpdater } from "@ledgerhq/electron-updater/out/MacUpdater"
 import { EventEmitter } from "events"
 import { assertThat } from "../helpers/fileAssert"
 import { createTestApp, httpExecutor, trackEvents, tuneTestUpdater, writeUpdateConfig } from "../helpers/updaterTestUtil"

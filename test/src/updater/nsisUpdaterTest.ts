@@ -1,6 +1,6 @@
 import { BintrayOptions, GenericServerOptions, GithubOptions, S3Options, SpacesOptions } from "builder-util-runtime"
-import { UpdateCheckResult } from "electron-updater"
-import { NsisUpdater } from "electron-updater/out/NsisUpdater"
+import { UpdateCheckResult } from "@ledgerhq/electron-updater"
+import { NsisUpdater } from "@ledgerhq/electron-updater/out/NsisUpdater"
 import { outputFile } from "fs-extra-p"
 import { tmpdir } from "os"
 import * as path from "path"

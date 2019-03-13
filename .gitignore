@@ -12,6 +12,7 @@
 .DS_Store
 
 /packages/*/out/
+/packages/@ledgerhq/*/out/
 /out/
 # to not exclude .js.snap (jest snapshots)
 /test/out/**/*.js
