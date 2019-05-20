@@ -118,8 +118,14 @@ export class MacUpdater extends BaseUpdater {
   }
 
   async quitAndInstall(isSilent: boolean = false, isForceRunAfter: boolean = false): Promise<void> {
+    if (this.quitAndInstallCalled) {
+      this._logger.info("quitAndInstall called but is already pending");
+      return
+    }
+    this.quitAndInstallCalled = true
     this._logger.info(`Install on explicit quitAndInstall`)
     const isInstalled = await this.install(isSilent, isSilent ? isForceRunAfter : true)
+    this._logger.info(`install returned isInstalled=${isInstalled}`)
     if (isInstalled) {
       this.nativeUpdater.quitAndInstall()
     }
